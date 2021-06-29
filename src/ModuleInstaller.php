@@ -12,16 +12,12 @@ class ModuleInstaller extends LibraryInstaller
      */
     public function getInstallPath(PackageInterface $package)
     {
-        $prefix = substr($package->getPrettyName(), 0, 17);
-        if ('frankyframlework/' !== $prefix) {
-            throw new \InvalidArgumentException(
-                'Unable to install template, phpdocumentor templates '
-                .'should always start their package name with '
-                .'"phpdocumentor/template-"'
-            );
+        $prefix = substr($package->getPrettyName(), 0, 16);
+        if ('frankyframework/' !== $prefix) {
+                 return 'vendor/'.$package->getPrettyName();
         }
 
-        return 'modulos/'.substr($package->getPrettyName(), 17);
+        return 'modulos/'.substr($package->getPrettyName(), 16);
     }
 
     /**
