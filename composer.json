@@ -1,0 +1,17 @@
+{
+    "name": "frankyframework/module-installer-plugin",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {"Franky\\Composer": "src/"}
+    },
+    "extra": {
+        "class": "Franky\\Composer\\ModuleInstallerPlugin"
+    },
+    "require": {
+        "composer-plugin-api": "^1.0"
+    },
+    "require-dev": {
+        "composer/composer": "^1.3"
+    }
+}
