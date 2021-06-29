@@ -14,7 +14,7 @@ class ModuleInstaller extends LibraryInstaller
     {
         $prefix = substr($package->getPrettyName(), 0, 17);
         if ('frankyframlework/' !== $prefix) {
-                 return 'vendor';
+                 return 'vendor/'.$package->getPrettyName();
         }
 
         return 'modulos/'.substr($package->getPrettyName(), 17);
