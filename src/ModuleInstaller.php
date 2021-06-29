@@ -15,9 +15,7 @@ class ModuleInstaller extends LibraryInstaller
         $prefix = substr($package->getPrettyName(), 0, 17);
         if ('frankyframlework/' !== $prefix) {
             throw new \InvalidArgumentException(
-                'Unable to install module ('.$prefix.'), frankyframlework module '
-                .'should always start their package name with '
-                .'"frankyframlework/"'
+                 return 'vendor';
             );
         }
 
